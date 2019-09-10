@@ -1,16 +1,43 @@
-import React from "react";
+import React, {useState} from "react";
+import OperatorButton from './OperatorButton';
+import {operators} from '../../../data';
 
-//import any components needed
-
-//Import your array data to from the provided data file
 
 const Operators = () => {
-  // STEP 2 - add the imported data to state
+  const [operatorState] = useState(operators);
+
   return (
-    <div>
-      {/* STEP 3 - Use .map() to iterate over your array data and return a button
-       component matching the name on the provided file. Pass
-       it any props needed by the child component*/}
+    <div class='operator_buttons'>
+      <span className="button_container">
+        {operatorState.map((operators, index)=> (
+          <OperatorButton key={index} operators={operators}/>
+        ))}
+      </span>
     </div>
   );
 };
+
+export default Operators;
+
+
+//   const divide = () =>{
+//     setOperatorState(operatorState => '/')
+//   };
+//   const mutliply = () =>{
+//     setOperatorState(operatorState => '*')
+//   };
+//   const subtract = () =>{
+//     setOperatorState(operatorState => '-')
+//   };
+//   const add = () =>{
+//     setOperatorState(operatorState => '+')
+//   };
+//   const equal = () =>{
+//     setOperatorState(operatorState => '=')
+//   };
+
+{/* <OperatorButton operator={divide} buttonValue = '/'/>
+<OperatorButton operator={multiply} buttonValue = '*'/>
+<OperatorButton operator={subtract} buttonValue = '-'/>
+<OperatorButton operator={add} buttonValue = '+'/>
+<OperatorButton operator={equal} buttonValue = '='/> */}
