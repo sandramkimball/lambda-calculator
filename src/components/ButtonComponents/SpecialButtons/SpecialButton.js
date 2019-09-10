@@ -15,3 +15,4 @@ const SpecialButton = props => {
 export default SpecialButton;
 
 //<button  onClick={()=> props.specials(props.count)} className='specials_button'> {props.specials.value}</button>
+
