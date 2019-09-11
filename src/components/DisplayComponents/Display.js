@@ -1,5 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 
-const Display = () => {
-  return <div className="display">{/* Display any props data here */}</div>;
+const Display = props=> {
+  const [count, setCount] = useState(0);
+  
+  return <div className="display">
+     {setCount}
+    </div>;
 };
+
+export default Display;

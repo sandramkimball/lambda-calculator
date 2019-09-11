@@ -1,10 +1,10 @@
-import React, {useState} from "react";
+import React from "react";
 import "./App.css";
 
 import Numbers from "./components/ButtonComponents/NumberButtons/NumberButton";
 import Operators from './components/ButtonComponents/OperatorButtons/OperatorButton';
 import Specials from './components/ButtonComponents/SpecialButtons/SpecialButton';
-// import CalculatorDisplay from './components/DisplayComponents/CalculatorDisplay';
+import Display from './components/DisplayComponents/Display';
 
 import Logo from "./components/DisplayComponents/Logo";
 
@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="container">
       <Logo />
-      {/* <CalculatorDisplay/> */}
+      <Display/>
       <div className="App">
         <Numbers/>
         <Operators/>
