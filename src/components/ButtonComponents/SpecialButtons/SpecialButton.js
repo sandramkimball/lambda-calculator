@@ -1,18 +1,17 @@
 import React from "react";
-import specials from '../../../data';
+
 
 const SpecialButton = props => {
   console.log('SpecialButton: ', props);
   return (
-    <div>
-    <button className='specials_button'> 
+    <button  className='specials_button' >
+    <span role= 'button' aria-label="ignoreNonDom: true"> 
       {props.specials}
-    </button>
-  </div>
+    </span>
+  </button>
   );
 };
 
 export default SpecialButton;
 
-//<button  onClick={()=> props.specials(props.count)} className='specials_button'> {props.specials.value}</button>
 

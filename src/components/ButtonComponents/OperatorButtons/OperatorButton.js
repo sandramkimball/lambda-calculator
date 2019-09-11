@@ -1,14 +1,13 @@
 import React from "react";
-import operators from '../../../data';
 
 const OperatorButton = props => {
   console.log('OperatorButton: ', props);
   return (
-    <div>
-      <button className="operators_button">
-        {props.button}
-      </button>
-    </div>
+    <button className="operators_button" >
+      <span role= 'button' aria-label="ignoreNonDom: true">
+        {props.operators}
+      </span>
+    </button>
   );
 };
 

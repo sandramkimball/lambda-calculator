@@ -1,17 +1,17 @@
 import React from "react";
-// import {numbers} from '../../../data';
 
 const NumberButton = props => {
   console.log('NumberButton: ', props);
   return (
-    <div>
-      <button className="numbers_button"> {props.numbers} </button>
-    </div>
+    <button className="numbers_button" >
+      <span role= 'button' aria-label="ignoreNonDom: true"> 
+        {props.numbers} 
+      </span>
+    </button>
   );
 };
 
 export default NumberButton;
 
-{/* <button onClick={()=> props.numbers(props.count)} className="numbers_button"> {props.numbers.value} </button> */}
 
 
