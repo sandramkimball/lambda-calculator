@@ -1,10 +1,9 @@
-import React, {useState} from "react";
+import React from "react";
 
 const Display = props=> {
-  const [count, setCount] = useState(0);
   
   return <div className="display">
-     {setCount}
+     {props.value}
     </div>;
 };
 

@@ -8,21 +8,72 @@ import Display from './components/DisplayComponents/Display';
 
 import Logo from "./components/DisplayComponents/Logo";
 
-// STEP 4 - import the button and display components
-// STEP 5 - After you get the components displaying using the provided data file, write your state hooks here. Once the state hooks are in place, write some functions:
-// Your functions should accept a parameter of the the item data being displayed to the DOM if they click one of those buttons and then call your setter function to update state.
-// Don't forget to pass the functions to the components as props.
-
 function App() {
+
+  // const [inputState, setInputState] = useState('');
+  // const [dataStorage, setDataStorage] = useState([]);
+  // const numberHandler = value => {
+  //   setInputState(inputState => {
+  //     inputState = inputState + value;
+  //     return inputState;
+  //   });
+  // };
+
+  // const solveEquation = () => {
+  //   dataStorage.forEach( (element, index) =>{
+  //     if (dataStorage.includes('x')){
+  //       console.log(Multiplication);
+  //     }
+  //     if (dataStorage.includes('/')){
+  //       console.log(Division);
+  //     }
+  //     if (dataStorage.includes('+')){
+  //       console.log(Addition);
+  //     }
+  //     if (dataStorage.includes('-')){
+  //       console.log(Subtraction);
+  //     }
+  //   });
+  // };
+
+  // const clear = () => {
+  //   setInputState = (inputState = "");
+  // }
+
+  // const specialHandler = value => {
+  //   if (value === 'C'){
+  //     clear();
+  //   }
+  // };
+
+  // const operatorHandler = value => {
+  //   setDataStorage(dataStorage => {
+  //     let temp = inputState.split(value);
+  //     temp.forEach (element=>{
+  //       dataStorage.push(element);
+  //     });
+  //     dataStorage.push(value);
+  //     return dataStorage;
+  //   });
+
+  //   clear();
+  //   if (value === '='){
+  //     solveEquation();
+  //   }
+  // };
 
   return (
     <div className="container">
       <Logo />
       <Display/>
       <div className="App">
-        <Numbers/>
-        <Operators/>
-        <Specials/>
+        <div>
+          <Specials/>
+          <Numbers/>
+        </div>
+        <div>
+          <Operators/>
+        </div>
       </div>
     </div>
   );

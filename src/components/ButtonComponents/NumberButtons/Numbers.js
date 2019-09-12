@@ -3,21 +3,18 @@ import {numbers} from '../../../data';
 import NumberButton from './NumberButton';
 
 
-/* STEP 3 - Use .map() to iterate over your data and return a button
-component matching the name. Pass any props needed by the child component*/
-
-
-const Numbers = () => {
-  const [numbersState, setNumbersState] = useState(numbers);
-
+const Numbers = props => {
+  const [numberState] = useState(numbers);
+  console.log('Numbers: ', numberState)
   return (
     <div className="numbers_container">
-        {numbersState.map((index, numbers)=> {return (
-          <NumberButton key={index} numbers={numbers} />
+        {numberState.map((number, index)=> { 
+          return(
+          <NumberButton key={index} number={number} fnc={props.onButtonPress}/>
         );
       })}
     </div>
   );
-}
+};
 
 export default Numbers;

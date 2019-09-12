@@ -3,14 +3,14 @@ import SpecialButton from './SpecialButton';
 import {specials} from '../../../data';
 
 
-const Specials = () => {
+const Specials = props => {
   const [specialState] = useState(specials);
 
   return (
     <div className='specials_container'>
-        {specialState.map((specials, index)=> (
-          <SpecialButton key={index} specials = {specials}/>
-        ))}
+        {specialState.map((special, index)=> {
+          return <SpecialButton key={index} special = {special}/>
+  })}
     </div>
   );
 };

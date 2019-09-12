@@ -4,11 +4,11 @@ import React from "react";
 const SpecialButton = props => {
   console.log('SpecialButton: ', props);
   return (
-    <button  className='specials_button' >
-    <span role= 'button' aria-label="ignoreNonDom: true"> 
-      {props.specials}
-    </span>
-  </button>
+    <div>
+      <button className='specials_button' onClick= {()=> props.fnc(props.special)}> 
+        {props.specials}
+      </button>
+    </div>
   );
 };
 
